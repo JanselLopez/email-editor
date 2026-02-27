@@ -1,11 +1,11 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import EmailEditor from "react-email-editor";
 
 export default function App() {
-  const emailEditorRef = useRef(null);
+  const emailEditorRef = useRef<any>(null);
 
   const exportHtml = () => {
-    emailEditorRef.current.editor.exportHtml((data) => {
+    emailEditorRef.current?.editor.exportHtml((data: any) => {
       const { html } = data;
       console.log(html);
     });
